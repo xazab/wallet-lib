@@ -1,4 +1,4 @@
-const { Transaction } = require('@dashevo/dashcore-lib');
+const { Transaction } = require('@xazab/xazabcore-lib');
 const fs = require('fs');
 
 module.exports = async function getTransaction(transactionHash) {

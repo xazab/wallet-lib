@@ -10,4 +10,4 @@ Parameters:
 
 Returns : transactionId (string).
 
-N.B : The TransactionID provided is subject to [transaction malleability](https://dashcore.readme.io/docs/core-guide-transactions-transaction-malleability), and is not a source of truth (the transaction might be included in a block with a different txid).
+N.B : The TransactionID provided is subject to [transaction malleability](https://xazabcore.readme.io/docs/core-guide-transactions-transaction-malleability), and is not a source of truth (the transaction might be included in a block with a different txid).

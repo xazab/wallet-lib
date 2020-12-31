@@ -18,4 +18,4 @@ export {
     utils,
     plugins,
 };
-declare module '@dashevo/wallet-lib';
+declare module '@xazab/wallet-lib';

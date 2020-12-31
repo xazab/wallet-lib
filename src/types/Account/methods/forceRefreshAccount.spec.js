@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const Dashcore = require('@dashevo/dashcore-lib');
+const Xazabcore = require('@xazab/xazabcore-lib');
 
 
 describe('Account - forceRefreshAccount', () => {

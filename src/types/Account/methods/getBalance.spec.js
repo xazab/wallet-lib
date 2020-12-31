@@ -30,13 +30,13 @@ describe('Account - getTotalBalance', function suite() {
     const balance = await getConfirmedBalance.call(mockedWallet);
     expect(balance).to.equal(184499999506);
   });
-  it('should correctly get the balance dash value instead of duff', async () => {
-    const balanceTotalDash = await getTotalBalance.call(mockedWallet, false);
-    const balanceUnconfDash = await getUnconfirmedBalance.call(mockedWallet, false);
-    const balanceConfDash = await getConfirmedBalance.call(mockedWallet, false);
+  it('should correctly get the balance xazab value instead of duff', async () => {
+    const balanceTotalXazab = await getTotalBalance.call(mockedWallet, false);
+    const balanceUnconfXazab = await getUnconfirmedBalance.call(mockedWallet, false);
+    const balanceConfXazab = await getConfirmedBalance.call(mockedWallet, false);
 
-    expect(balanceTotalDash).to.equal(1844.99999506);
-    expect(balanceUnconfDash).to.equal(0);
-    expect(balanceConfDash).to.equal(1844.99999506);
+    expect(balanceTotalXazab).to.equal(1844.99999506);
+    expect(balanceUnconfXazab).to.equal(0);
+    expect(balanceConfXazab).to.equal(1844.99999506);
   });
 });

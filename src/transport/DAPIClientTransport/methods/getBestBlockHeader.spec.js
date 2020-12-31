@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { Block } = require('@dashevo/dashcore-lib');
+const { Block } = require('@xazab/xazabcore-lib');
 
 const DAPIClientTransport = require('../DAPIClientTransport');
 

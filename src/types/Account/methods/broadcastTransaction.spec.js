@@ -1,11 +1,11 @@
 const { expect } = require('chai');
-const Dashcore = require('@dashevo/dashcore-lib');
+const Xazabcore = require('@xazab/xazabcore-lib');
 const broadcastTransaction = require('./broadcastTransaction');
 const validRawTxs = require('../../../../fixtures/rawtx').valid;
 const invalidRawTxs = require('../../../../fixtures/rawtx').invalid;
 const expectThrowsAsync = require('../../../utils/expectThrowsAsync');
 
-const { PrivateKey } = Dashcore;
+const { PrivateKey } = Xazabcore;
 
 describe('Account - broadcastTransaction', function suite() {
   this.timeout(10000);
@@ -30,7 +30,7 @@ describe('Account - broadcastTransaction', function suite() {
     keysToSign = [
         new PrivateKey('26d6b24119d1a71de6372ea2d3dc22a014d37e4828b43db6936cb41ea461cce8')
     ];
-    oneToOneTx = new Dashcore.Transaction()
+    oneToOneTx = new Xazabcore.Transaction()
         .from(utxos)
         .to(address, 138)
         .fee(fee);

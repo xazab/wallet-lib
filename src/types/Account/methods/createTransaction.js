@@ -2,9 +2,9 @@
 const _ = require('lodash');
 const {
   Transaction, PrivateKey, HDPrivateKey, crypto, Script,
-} = require('@dashevo/dashcore-lib');
+} = require('@xazab/xazabcore-lib');
 const { CreateTransactionError } = require('../../../errors');
-const { dashToDuffs, coinSelection, is } = require('../../../utils');
+const { xazabToDuffs, coinSelection, is } = require('../../../utils');
 const _loadStrategy = require('../_loadStrategy');
 
 const parseUtxos = (utxos) => {
@@ -17,11 +17,11 @@ const parseUtxos = (utxos) => {
 /**
  * Create a transaction based around on the provided information
  * @param {createTransactionOptions} opts - Options object
- * @param opts.amount - Amount in dash that you want to send
+ * @param opts.amount - Amount in xazab that you want to send
  * @param opts.satoshis - Amount in satoshis
  * @param opts.recipient - Address of the recipient
  * @param opts.recipients - Optional - replace individual satoshis/amount/recipient args
- * @param opts.change - String - A valid Dash address - optional
+ * @param opts.change - String - A valid Xazab address - optional
  * @param opts.utxos - Array - A utxo set - optional
  * @param opts.isInstantSend - If you want to use IS or stdTx.
  * @param opts.deductFee - Deduct fee
@@ -46,9 +46,9 @@ function createTransaction(opts = {}) {
   } else {
     // FIXME : Remove amount support in next release.
     if (!opts || (!opts.amount && !opts.satoshis)) {
-      throw new Error('An amount in dash or in satoshis is expected to create a transaction');
+      throw new Error('An amount in xazab or in satoshis is expected to create a transaction');
     }
-    const satoshis = (opts.amount && !opts.satoshis) ? dashToDuffs(opts.amount) : opts.satoshis;
+    const satoshis = (opts.amount && !opts.satoshis) ? xazabToDuffs(opts.amount) : opts.satoshis;
     if (!opts || !opts.recipient) {
       throw new Error('A recipient is expected to create a transaction');
     }

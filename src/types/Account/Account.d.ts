@@ -11,11 +11,11 @@ import {
     Plugins, RawTransaction, StatusInfo, TransactionsMap, WalletObj
 } from "../types";
 import { KeyChain } from "../KeyChain/KeyChain";
-import { HDPrivateKey, InstantLock } from "@dashevo/dashcore-lib";
+import { HDPrivateKey, InstantLock } from "@xazab/xazabcore-lib";
 import { Wallet } from "../../index";
 import { Transport } from "../../transport/Transport";
-import { BlockHeader } from "@dashevo/dashcore-lib/typings/block/BlockHeader";
-import { UnspentOutput } from "@dashevo/dashcore-lib/typings/transaction/UnspentOutput";
+import { BlockHeader } from "@xazab/xazabcore-lib/typings/block/BlockHeader";
+import { UnspentOutput } from "@xazab/xazabcore-lib/typings/transaction/UnspentOutput";
 import { Storage } from "../Storage/Storage";
 
 export declare class Account {

@@ -15,7 +15,7 @@ Parameters:
 | **txOpts.change**             | string                        | no                           | Defaults: `account.getUnusedAddress(internal)`. When set, will use that address as a change address on remaining fund               |
 
 
-Returns : [Transaction](https://dashevo.github.io/DashJS/#/usage/dashcorelib-primitives?id=transaction)   
+Returns : [Transaction](https://xazab.github.io/XazabJS/#/usage/xazabcorelib-primitives?id=transaction)   
 Notes: This transaction will be need to be signed [`account.sign(transaction)`](/account/sign) and then, if wanted, broadcasted to the network for execution `account.broadcastTransaction()`.
 
 Example : 

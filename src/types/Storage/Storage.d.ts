@@ -6,9 +6,9 @@ import {
     TransactionInfo,
     WalletObj, WalletType
 } from "../types";
-import { BlockHeader } from "@dashevo/dashcore-lib";
+import { BlockHeader } from "@xazab/xazabcore-lib";
 import { Account } from "../..";
-import { Transaction } from "@dashevo/dashcore-lib/typings/transaction/Transaction";
+import { Transaction } from "@xazab/xazabcore-lib/typings/transaction/Transaction";
 
 export declare namespace Storage {
     interface IStorageOptions {

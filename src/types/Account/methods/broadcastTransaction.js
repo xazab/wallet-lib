@@ -1,9 +1,9 @@
-const Dashcore = require('@dashevo/dashcore-lib');
+const Xazabcore = require('@xazab/xazabcore-lib');
 const { is } = require('../../../utils');
 const {
   ValidTransportLayerRequired,
   InvalidRawTransaction,
-  InvalidDashcoreTransaction,
+  InvalidXazabcoreTransaction,
 } = require('../../../errors');
 
 function impactAffectedInputs({ inputs }) {
@@ -46,11 +46,11 @@ async function broadcastTransaction(transaction) {
   if (is.string(transaction)) {
     const rawtx = transaction.toString();
     if (!is.rawtx(rawtx)) throw new InvalidRawTransaction(rawtx);
-    return broadcastTransaction.call(this, new Dashcore.Transaction(rawtx));
+    return broadcastTransaction.call(this, new Xazabcore.Transaction(rawtx));
   }
 
-  if (!is.dashcoreTransaction(transaction)) {
-    throw new InvalidDashcoreTransaction(transaction);
+  if (!is.xazabcoreTransaction(transaction)) {
+    throw new InvalidXazabcoreTransaction(transaction);
   }
 
   if (!transaction.isFullySigned()) {
@@ -59,7 +59,7 @@ async function broadcastTransaction(transaction) {
   const txid = await this.transport.sendTransaction(transaction.toString());
   // We now need to impact/update our affected inputs
   // so we clear them out from UTXOset.
-  const { inputs } = new Dashcore.Transaction(transaction).toObject();
+  const { inputs } = new Xazabcore.Transaction(transaction).toObject();
   impactAffectedInputs.call(this, {
     inputs,
   });

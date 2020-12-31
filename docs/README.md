@@ -1,11 +1,11 @@
 ## Wallet-lib
 
-[![NPM Version](https://img.shields.io/npm/v/@dashevo/wallet-lib)](https://www.npmjs.com/package/@dashevo/wallet-lib)
-[![Build Status](https://travis-ci.com/dashevo/wallet-lib.svg?branch=master)](https://travis-ci.com/dashevo/wallet-lib)
-[![Release Date](https://img.shields.io/github/release-date/dashevo/wallet-lib)](https://github.com/dashevo/wallet-lib/releases/latest)
+[![NPM Version](https://img.shields.io/npm/v/@xazab/wallet-lib)](https://www.npmjs.com/package/@xazab/wallet-lib)
+[![Build Status](https://travis-ci.com/xazab/wallet-lib.svg?branch=master)](https://travis-ci.com/xazab/wallet-lib)
+[![Release Date](https://img.shields.io/github/release-date/xazab/wallet-lib)](https://github.com/xazab/wallet-lib/releases/latest)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen)](https://github.com/RichardLitt/standard-readme)
 
-A pure and extensible JavaScript Wallet Library for Dash
+A pure and extensible JavaScript Wallet Library for Xazab
 
 ### What it is 
 
@@ -25,7 +25,7 @@ In order to use this library in Node, you will need to add it to your project as
 Having [NodeJS](https://nodejs.org/) installed, just type in your terminal : 
 
 ```sh
-npm install @dashevo/wallet-lib
+npm install @xazab/wallet-lib
 ```
 
 ### CDN Standalone
@@ -33,7 +33,7 @@ npm install @dashevo/wallet-lib
 For browser usage, you can also directly rely on unpkg :  
 
 ```
-<script src="https://unpkg.com/@dashevo/wallet-lib"></script>
+<script src="https://unpkg.com/@xazab/wallet-lib"></script>
 ```
 
 ## Usage
@@ -41,7 +41,7 @@ For browser usage, you can also directly rely on unpkg :
 In your file, where you want to execute it :
 
 ```js
-const { Wallet, EVENTS } = require('@dashevo/wallet-lib');
+const { Wallet, EVENTS } = require('@xazab/wallet-lib');
 
 const wallet = new Wallet();
 
@@ -60,5 +60,5 @@ wallet.getAccount().then((account) => {
 
 ## Licence
 
-[MIT](https://github.com/dashevo/wallet-lib/blob/master/LICENCE.md) © Dash Core Group, Inc.
+[MIT](https://github.com/xazab/wallet-lib/blob/master/LICENCE.md) © Dash Core Group, Inc. | Xazab Foundations
 

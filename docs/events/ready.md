@@ -3,7 +3,7 @@
 
 Example: 
 ```js
-const {EVENTS} = require('@dashevo/wallet-lib');
+const {EVENTS} = require('@xazab/wallet-lib');
 const onReady = ()=>{
   console.log('Wallet-lib is ready to perform action');
 }

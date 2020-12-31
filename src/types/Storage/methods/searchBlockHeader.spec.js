@@ -1,5 +1,5 @@
 const {expect} = require('chai');
-const {BlockHeader} = require('@dashevo/dashcore-lib');
+const {BlockHeader} = require('@xazab/xazabcore-lib');
 const searchBlockHeader = require('./searchBlockHeader');
 
 const existingBlockHeader = new BlockHeader.fromObject({

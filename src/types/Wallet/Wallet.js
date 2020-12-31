@@ -1,4 +1,4 @@
-const { PrivateKey, Networks } = require('@dashevo/dashcore-lib');
+const { PrivateKey, Networks } = require('@xazab/xazabcore-lib');
 
 const _ = require('lodash');
 const Storage = require('../Storage/Storage');

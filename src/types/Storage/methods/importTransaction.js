@@ -1,6 +1,6 @@
-const { Transaction } = require('@dashevo/dashcore-lib');
+const { Transaction } = require('@xazab/xazabcore-lib');
 const { Output } = Transaction;
-const { InvalidDashcoreTransaction } = require('../../../errors');
+const { InvalidXazabcoreTransaction } = require('../../../errors');
 const { FETCHED_CONFIRMED_TRANSACTION } = require('../../../EVENTS');
 
 const parseStringifiedTransaction = (stringified) => new Transaction(stringified);
@@ -15,10 +15,10 @@ const importTransaction = function importTransaction(transaction) {
       // eslint-disable-next-line no-param-reassign
       transaction = parseStringifiedTransaction(transaction);
       if (!transaction.hash || !transaction.inputs.length || !transaction.outputs.length) {
-        throw new InvalidDashcoreTransaction(transaction);
+        throw new InvalidXazabcoreTransaction(transaction);
       }
     } catch (e) {
-      throw new InvalidDashcoreTransaction(transaction);
+      throw new InvalidXazabcoreTransaction(transaction);
     }
   }
   const { store, network, mappedAddress } = this;

@@ -4,7 +4,7 @@
 
 Example: 
 ```js
-const {EVENTS} = require('@dashevo/wallet-lib');
+const {EVENTS} = require('@xazab/wallet-lib');
 const onUnconfirmedBalanceChange = ()=>{
   console.log('Unconfirmed Balance changed');
 }

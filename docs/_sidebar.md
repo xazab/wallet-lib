@@ -93,4 +93,4 @@
 - Develop
     - [Logging](develop/logging.md)
     - [Persistence](develop/persistence.md)
-- [License](https://github.com/dashevo/wallet-lib/blob/master/LICENSE)
+- [License](https://github.com/xazab/wallet-lib/blob/master/LICENSE)

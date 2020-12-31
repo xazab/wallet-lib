@@ -1,6 +1,6 @@
 const {
   HDPublicKey,
-} = require('@dashevo/dashcore-lib');
+} = require('@xazab/xazabcore-lib');
 /**
  * Derive from HDPrivateKey to a specific path
  * @param {string} path

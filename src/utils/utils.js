@@ -1,17 +1,17 @@
-const { Script, Address } = require('@dashevo/dashcore-lib');
-const { DUFFS_PER_DASH } = require('../CONSTANTS');
+const { Script, Address } = require('@xazab/xazabcore-lib');
+const { DUFFS_PER_XAZAB } = require('../CONSTANTS');
 
-function dashToDuffs(dash) {
-  if (dash === undefined || dash.constructor.name !== Number.name) {
+function xazabToDuffs(xazab) {
+  if (xazab === undefined || xazab.constructor.name !== Number.name) {
     throw new Error('Can only convert a number');
   }
-  return parseInt((dash * DUFFS_PER_DASH).toFixed(0), 10);
+  return parseInt((xazab * DUFFS_PER_XAZAB).toFixed(0), 10);
 }
-function duffsToDash(duffs) {
+function duffsToXazab(duffs) {
   if (duffs === undefined || duffs.constructor.name !== Number.name) {
     throw new Error('Can only convert a number');
   }
-  return duffs / DUFFS_PER_DASH;
+  return duffs / DUFFS_PER_XAZAB;
 }
 function hasProp(obj, prop) {
   if (!obj) return false;
@@ -38,5 +38,5 @@ function getBytesOf(elem, type) {
   }
 }
 module.exports = {
-  dashToDuffs, duffsToDash, getBytesOf, hasProp,
+  xazabToDuffs, duffsToXazab, getBytesOf, hasProp,
 };

@@ -1,7 +1,7 @@
 import {Mnemonic, PrivateKey, HDPublicKey, Strategy, Network, Plugins, AddressInfoMap, WalletType} from "../types";
 import {Account} from "../Account/Account";
 import {Storage} from "../Storage/Storage";
-import {HDPrivateKey} from "@dashevo/dashcore-lib";
+import {HDPrivateKey} from "@xazab/xazabcore-lib";
 import {Transport} from "../../transport/Transport";
 
 export declare class Wallet {

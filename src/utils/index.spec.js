@@ -1,8 +1,8 @@
 const { expect } = require('chai');
-const { Networks, Address, Mnemonic } = require('@dashevo/dashcore-lib');
+const { Networks, Address, Mnemonic } = require('@xazab/xazabcore-lib');
 const {
-  dashToDuffs,
-  duffsToDash,
+  xazabToDuffs,
+  duffsToXazab,
   generateNewMnemonic,
   mnemonicToHDPrivateKey,
   is,
@@ -14,15 +14,15 @@ const figureBridgeFixture = require('../../fixtures/figurebridge');
 
 describe('Utils', function suite() {
   this.timeout(10000);
-  it('should handle dash2Duff', () => {
-    expect(dashToDuffs(2000)).to.equal(200000000000);
-    expect(dashToDuffs(-2000)).to.equal(-200000000000);
-    expect(() => dashToDuffs('deuxmille')).to.throw('Can only convert a number');
+  it('should handle xazab2Duff', () => {
+    expect(xazabToDuffs(2000)).to.equal(200000000000);
+    expect(xazabToDuffs(-2000)).to.equal(-200000000000);
+    expect(() => xazabToDuffs('deuxmille')).to.throw('Can only convert a number');
   });
-  it('should handle duff2Dash', () => {
-    expect(duffsToDash(200000000000)).to.equal(2000);
-    expect(duffsToDash(-200000000000)).to.equal(-2000);
-    expect(() => duffsToDash('deuxmille')).to.throw('Can only convert a number');
+  it('should handle duff2Xazab', () => {
+    expect(duffsToXazab(200000000000)).to.equal(2000);
+    expect(duffsToXazab(-200000000000)).to.equal(-2000);
+    expect(() => duffsToXazab('deuxmille')).to.throw('Can only convert a number');
   });
   it('should generate a mnemonic', () => {
     const mnemonic = generateNewMnemonic();

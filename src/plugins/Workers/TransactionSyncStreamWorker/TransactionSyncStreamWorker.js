@@ -1,6 +1,6 @@
 const {
   Transaction, MerkleBlock, InstantLock,
-} = require('@dashevo/dashcore-lib');
+} = require('@xazab/xazabcore-lib');
 const { WALLET_TYPES } = require('../../../CONSTANTS');
 
 const Worker = require('../../Worker');

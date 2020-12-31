@@ -6,7 +6,7 @@ const {
   Transaction,
   MerkleBlock,
   InstantLock
-} = require('@dashevo/dashcore-lib');
+} = require('@xazab/xazabcore-lib');
 
 const TransactionSyncStreamWorker = require('../../../../src/plugins/Workers/TransactionSyncStreamWorker/TransactionSyncStreamWorker');
 

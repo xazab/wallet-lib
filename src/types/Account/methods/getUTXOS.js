@@ -1,4 +1,4 @@
-const { Address, Transaction } = require('@dashevo/dashcore-lib');
+const { Address, Transaction } = require('@xazab/xazabcore-lib');
 /**
  * Return all the utxos
  * @return {UnspentOutput[]}

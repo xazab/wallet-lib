@@ -14,7 +14,7 @@
             "scripthash": 19,
             "xpubkey": 70617039,
             "xprivkey": 70615956,
-            "port": 19999,
+            "port": 29999,
             "networkMagic": {
               "type": "Buffer",
               "data": [
@@ -25,9 +25,9 @@
               ]
             },
             "dnsSeeds": [
-              "testnet-seed.darkcoin.io",
-              "testnet-seed.dashdot.io",
-              "test.dnsseed.masternode.io"
+              "testnet-seed.xazab.xyz",
+              "testnet-seed2.xazab.xyz",
+              "test.dnsseed3.xazab.xyz"
             ]
           }
         }
@@ -40,7 +40,7 @@
         "scripthash": 19,
         "xpubkey": 70617039,
         "xprivkey": 70615956,
-        "port": 19999,
+        "port": 29999,
         "networkMagic": {
           "type": "Buffer",
           "data": [
@@ -51,9 +51,9 @@
           ]
         },
         "dnsSeeds": [
-          "testnet-seed.darkcoin.io",
-          "testnet-seed.dashdot.io",
-          "test.dnsseed.masternode.io"
+          "testnet-seed.xazab.xyz",
+          "testnet-seed2.xazab.xyz",
+          "test.dnsseed3.xazab.xyz"
         ]
       },
       "mnemonic": null,

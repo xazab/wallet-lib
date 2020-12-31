@@ -7,7 +7,7 @@ In order for a plugin to have the ability to access wallet data, you have to add
 Below, we create a Standard Plugin, see [Using a plugin](plugins/using-a-plugin.md) for more information about the different plugin types.
 
 ```js
-const { StandardPlugin } = require('@dashevo/wallet-lib').plugins;
+const { StandardPlugin } = require('@xazab/wallet-lib').plugins;
 
 class MyWalletConsolidatorPlugin extends StandardPlugin { 
      constructor() {
@@ -75,4 +75,4 @@ const wallet = new Wallet({
 Due to the risk from running a plugin that have access to your keychain, these are, by default, not accessible.  
 One would need to initialize a Wallet with the option `allowSensitiveOperations` set to `true`.  
 
-You can see the list of thoses [sensitive functions and properties](https://github.com/dashevo/wallet-lib/blob/master/src/CONSTANTS.js#L67), anything under `UNSAFE_*` will require this option to be set to true in order to be use from within a plugin.  
+You can see the list of thoses [sensitive functions and properties](https://github.com/xazab/wallet-lib/blob/master/src/CONSTANTS.js#L67), anything under `UNSAFE_*` will require this option to be set to true in order to be use from within a plugin.  

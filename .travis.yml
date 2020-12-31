@@ -33,7 +33,7 @@ install:
   - npm ci
   - cp .env.example .env
   # Get the latest version of travis-ci-tools
-  - curl -u $GITHUB_USER:$GITHUB_TOKEN -s https://api.github.com/repos/dashevo/travis-ci-tools/releases/latest | jq -r '.tarball_url' | xargs -I {} -n1 wget -O travis-ci-tools.tar.gz -q {}
+  - curl -u $GITHUB_USER:$GITHUB_TOKEN -s https://api.github.com/repos/xazab/travis-ci-tools/releases/latest | jq -r '.tarball_url' | xargs -I {} -n1 wget -O travis-ci-tools.tar.gz -q {}
   - mkdir ~/travis-ci-tools && tar -C ~/travis-ci-tools -xvf travis-ci-tools.tar.gz
   - export CI_TOOLS_DIR="$(ls ~/travis-ci-tools)"
   - cd ~/travis-ci-tools/$CI_TOOLS_DIR
@@ -47,7 +47,7 @@ before_script:
 script: npm run check-package && npm run lint && npm run test
 
 before_deploy:
-  # Add token for @dashevo private npm registry & deployment
+  # Add token for @xazab private npm registry & deployment
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 
 deploy:
@@ -55,5 +55,5 @@ deploy:
     skip_cleanup: true
     script: bash scripts/travis-deploy.sh
     on:
-      repo: dashevo/wallet-lib
+      repo: xazab/wallet-lib
       tags: true

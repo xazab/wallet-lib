@@ -1,18 +1,18 @@
 const CONSTANTS = {
   BIP45: 'BIP45',
   BIP44: 'BIP44',
-  DUFFS_PER_DASH: 100000000,
+  DUFFS_PER_XAZAB: 100000000,
   BIP44_ADDRESS_GAP: 20,
   // TODO : When chainlock is launched in mainnet, reduce this to 1 \0/
   SECURE_TRANSACTION_CONFIRMATIONS_NB: 6,
   BIP32__ROOT_PATH: 'm',
-  // Livenet is 5 for Dash.
-  BIP44_LIVENET_ROOT_PATH: "m/44'/5'",
+  // Livenet is 988 for Xazab.
+  BIP44_LIVENET_ROOT_PATH: "m/44'/988'",
   // All testnet coins are 1's
   BIP44_TESTNET_ROOT_PATH: "m/44'/1'",
 
-  // Livenet is 5 for Dash.
-  DIP9_LIVENET_ROOT_PATH: "m/9'/5'",
+  // Livenet is 988 for Xazab.
+  DIP9_LIVENET_ROOT_PATH: "m/9'/988'",
   // All testnet coins are 1's
   DIP9_TESTNET_ROOT_PATH: "m/9'/1'",
   // The max amount of an UTXO to be considered too big to be used in the tx before exploring

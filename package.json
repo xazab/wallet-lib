@@ -1,7 +1,7 @@
 {
-  "name": "@dashevo/wallet-lib",
+  "name": "@xazab/wallet-lib",
   "version": "7.17.2",
-  "description": "Light wallet library for Dash",
+  "description": "Light wallet library for Xazab",
   "main": "src/index.js",
   "unpkg": "dist/wallet-lib.min.js",
   "scripts": {
@@ -26,24 +26,25 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dashevo/wallet-lib.git"
+    "url": "git+https://github.com/xazab/wallet-lib.git"
   },
   "keywords": [
     "cryptocurrency",
-    "dash",
+    "xazab",
+    "xazab",
     "wallet"
   ],
   "author": "Dash Core Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dashevo/wallet-lib/issues"
+    "url": "https://github.com/xazab/wallet-lib/issues"
   },
-  "homepage": "https://github.com/dashevo/wallet-lib#readme",
+  "homepage": "https://github.com/xazab/wallet-lib#readme",
   "dependencies": {
-    "@dashevo/dapi-client": "~0.17.2",
-    "@dashevo/dashcore-lib": "~0.19.19",
-    "@dashevo/dpp": "~0.17.0",
-    "@dashevo/grpc-common": "~0.3.1",
+    "@xazab/dapi-client": "~0.17.2",
+    "@xazab/xazabcore-lib": "~0.19.19",
+    "@xazab/dpp": "~0.17.0",
+    "@xazab/grpc-common": "~0.3.1",
     "cbor": "^5.0.2",
     "crypto-js": "^4.0.0",
     "lodash": "^4.17.19",

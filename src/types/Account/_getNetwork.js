@@ -1,5 +1,5 @@
-const Dashcore = require('@dashevo/dashcore-lib');
+const Xazabcore = require('@xazab/xazabcore-lib');
 
 module.exports = function getNetwork(network) {
-  return Dashcore.Networks[network].toString() || Dashcore.Networks.testnet.toString();
+  return Xazabcore.Networks[network].toString() || Xazabcore.Networks.testnet.toString();
 };

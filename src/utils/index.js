@@ -1,7 +1,7 @@
 const { varIntSizeBytesFromLength } = require('./varInt');
 const {
-  dashToDuffs,
-  duffsToDash,
+  xazabToDuffs,
+  duffsToXazab,
   getBytesOf,
   hasProp,
 } = require('./utils');
@@ -20,8 +20,8 @@ const { hash, doubleSha256, sha256 } = require('./crypto');
 const fundWallet = require('./fundWallet');
 
 module.exports = {
-  dashToDuffs,
-  duffsToDash,
+  xazabToDuffs,
+  duffsToXazab,
   generateNewMnemonic,
   mnemonicToHDPrivateKey,
   mnemonicToWalletId,

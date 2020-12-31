@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const { dashToDuffs, duffsToDash } = require('../../../utils');
+const { xazabToDuffs, duffsToXazab } = require('../../../utils');
 
 // Will filter out transaction that are not concerning us
 // (which can happen in the case of multiple account in store)
@@ -176,7 +176,7 @@ async function getTransactionHistory() {
         const isExternal = externalAddressesList.includes(address);
         const isOtherAccount = otherAccountAddressesList.includes(address);
 
-        const el = { address, valueSat: dashToDuffs(parseFloat(vout.value)) };
+        const el = { address, valueSat: xazabToDuffs(parseFloat(vout.value)) };
         const type = determineType(isChange, isExternal, isOtherAccount);
 
         if (!meta.vout[type][address]) meta.vout[type][address] = el;
@@ -295,7 +295,7 @@ async function getTransactionHistory() {
 
     const cleanUpPredicate = (val) => ({
       address: val.address,
-      amount: duffsToDash(val.valueSat).toString(),
+      amount: duffsToXazab(val.valueSat).toString(),
       valueSat: val.valueSat,
     });
     const transaction = {

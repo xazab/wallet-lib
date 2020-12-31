@@ -2,7 +2,7 @@
 // Todo : Some validators here are really proto type of methods, urgent impr is needed here.
 const {
   PrivateKey, HDPrivateKey, HDPublicKey, Transaction, Mnemonic, Address,
-} = require('@dashevo/dashcore-lib');
+} = require('@xazab/xazabcore-lib');
 
 const is = {
   // Primitives
@@ -33,7 +33,7 @@ const is = {
   address: (addr) => !is.undefOrNull(addr) && (is.string(addr) || addr.constructor.name === Address.name),
   addressObj: (addrObj) => !is.undefOrNull(addrObj) && ((!is.undefOrNull(addrObj.address) && addrObj.address.constructor.name === Address.name) || (is.string(addrObj.address) && (is.string(addrObj.path)))),
   transactionObj: (tx) => is.obj(tx) && is.txid(tx.txid) && tx.vin && is.arr(tx.vin) && tx.vout && is.arr(tx.vout),
-  dashcoreTransaction: (tx) => is.type(tx, Transaction.name),
+  xazabcoreTransaction: (tx) => is.type(tx, Transaction.name),
   feeRate: (feeRate) => is.obj(feeRate) && is.string(feeRate.type) && is.int(feeRate.value),
   txid: (txid) => is.string(txid) && txid.length === 64,
   utxo: (utxo) => is.type(utxo, Transaction.UnspentOutput.name),
